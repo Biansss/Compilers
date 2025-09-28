@@ -1,0 +1,28 @@
+
+;; Function main (null)
+;; enabled by -tree-original
+
+
+{
+  int n = 5;
+  int result = 1;
+
+    int n = 5;
+    int result = 1;
+  {
+    int i = 1;
+
+        int i = 1;
+    goto <D.2352>;
+    <D.2351>:;
+    result = result * i;
+     ++i;
+    <D.2352>:;
+    if (i <= n) goto <D.2351>; else goto <D.2349>;
+    <D.2349>:;
+  }
+  printf ((const char * restrict) "The factorial of %d is %d\n", n, result);
+  return 0;
+}
+return 0;
+

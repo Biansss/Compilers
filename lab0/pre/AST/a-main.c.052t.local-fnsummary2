@@ -1,0 +1,56 @@
+
+;; Function main (main, funcdef_no=0, decl_uid=2344, cgraph_uid=1, symbol_order=0)
+
+
+Analyzing function body size: main/0
+
+IPA function summary for main/0
+  global time:     19.000000
+  self size:       11
+  global size:     11
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:5.000000, time:6.000000
+    size:2.000000, time:0.000000,  executed if:(not inlined)
+  calls:
+    printf/1 function body not available
+      freq:1.00 loop depth: 0 size: 4 time: 13
+
+int main ()
+{
+  int i;
+  int result;
+  int n;
+  int D.2354;
+  int _8;
+
+  <bb 2> :
+  n_3 = 5;
+  result_4 = 1;
+  i_5 = 1;
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  result_9 = result_1 * i_2;
+  i_10 = i_2 + 1;
+
+  <bb 4> :
+  # result_1 = PHI <result_4(2), result_9(3)>
+  # i_2 = PHI <i_5(2), i_10(3)>
+  if (i_2 <= n_3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  printf ("The factorial of %d is %d\n", n_3, result_1);
+  _8 = 0;
+
+  <bb 6> :
+<L3>:
+  return _8;
+
+}
+
+

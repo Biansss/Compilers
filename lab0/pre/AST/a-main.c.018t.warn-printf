@@ -1,0 +1,51 @@
+
+;; Function main (main, funcdef_no=0, decl_uid=2344, cgraph_uid=1, symbol_order=0)
+
+main.c:15: printf: objsize = 9223372036854775807, fmtstr = "The factorial of %d is %d
+"
+  Directive 1 at offset 0: "The factorial of ", length = 17
+    Result: 17, 17, 17, 17 (17, 17, 17, 17)
+  Directive 2 at offset 17: "%d"
+    Result: 1, 1, 11, 11 (18, 18, 28, 28)
+  Directive 3 at offset 19: " is ", length = 4
+    Result: 4, 4, 4, 4 (22, 22, 32, 32)
+  Directive 4 at offset 23: "%d"
+    Result: 1, 1, 11, 11 (23, 23, 43, 43)
+  Directive 5 at offset 25: "
+", length = 1
+    Result: 1, 1, 1, 1 (24, 24, 44, 44)
+  Directive 6 at offset 26: "", length = 1
+int main ()
+{
+  int i;
+  int result;
+  int n;
+  int D.2354;
+
+  <bb 2> :
+  n = 5;
+  result = 1;
+  i = 1;
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  result = result * i;
+  i = i + 1;
+
+  <bb 4> :
+  if (i <= n)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  printf ("The factorial of %d is %d\n", n, result);
+  D.2354 = 0;
+
+  <bb 6> :
+<L3>:
+  return D.2354;
+
+}
+
+
